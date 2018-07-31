@@ -43,49 +43,68 @@ names.send(:[], 0)
 names.respond_to_undefined_method
 
 # check if an object responds to a message
-names.responds_to? message_name
+names.respond_to?("some_method")
 ```
 
-- build a Dog hash
-- dog = {"name" => "Lord Barkington", "breed" => "Collie"}
-- This is fine but `dog` is just a hash.  We can't extend this to have any behavior we might want a dog to do.  Make an empty Dog class.
-- `Dog.new`
+- build a Cat hash
+- ella = {"name" => "Ella", "fluffiness" => 10}
+- This is fine but `ella` is just a hash.  We can't extend this to have any behavior we might want a cat to do.  Make an empty Cat class.
+- `Cat.new`
 ```
-class Dog
+class Cat
     def name=(name)
         @name = name
     end
 end
 ```
+
 - What is the "@"?
     - instance variable
     - accessible throughout the class
+    - talk about scope here
 
-- Define getter/setter for name and breed
-- Dog.name vs dog.name
-- attr_accessors
+- add a getter method
+```rb
+    def name
+        @name
+    end
+```
+
+- Define getter/setter for name and fluffiness
 - custom getter/setters:
 ```
-    def breed
-        if @breed
-            @breed
+    def fluffiness
+        if @fluffiness > 5
+            return "Very fluffy"
         else
-            "Mutt"
+            return "Not so fluffy"
         end
     end
 ```
 
 - add initialize method
 ```
-    def initialize(name, breed)
+    def initialize(name, fluffiness)
         @name = name
-        @breed = breed
+        @fluffiness = fluffiness
     end
 ```
 
-- make breed optional
-
+- attr_accessors
+- default argument for `number_of_legs`
 - Build out stuff
-- add instance methods for bark
+```rb
+    def introduction
+        "My name is #{self.name}"
+    end
+```
+- `@name vs self.name` -- often the same in practice, but the former accesses the variable 
+directly while self.name gets the accessor method
+```rb
+def introduction
+        "My name is #{self.name} and I have a fluffiness score of #{@fluffiness}.  I am #{self.fluffiness}"
+end
+```
 - class variable for @@all
+  - it seemed to work to make this an instance method first, and then change it to a class method to demonstrate the difference
 - class methods
