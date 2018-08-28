@@ -2,6 +2,8 @@ require 'rest-client'
 require 'json'
 require 'pry'
 
+GOOGLE_BOOKS_API_BASEURL = "https://www.googleapis.com/books/v1/volumes?q="
+
 
 def get_book_info(url)
     response = RestClient.get(url)
@@ -28,7 +30,6 @@ def get_input
 end
 
 def main
-    url = "https://www.googleapis.com/books/v1/volumes?q="
 
     # if input is blank then ask again
     # input = "Ruby Programming" "RubyProgramming"
@@ -38,7 +39,7 @@ def main
         input = get_input
     end
     query_parameters = input.sub(" ", "+")
-    url += query_parameters
+    url = GOOGLE_BOOKS_API_BASE_URL + query_parameters
     items = get_book_info(url)
     print_books(items)
 end
