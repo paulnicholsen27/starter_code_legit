@@ -113,7 +113,7 @@ Why is this inefficient?
 
 Build up to a more full bank account model following the example below. Keep in mind, many students may not have seen `attr_` macros, class methods, `initialize`, and class and instance variables. Define each of these through your steps leading up to the following code.
 
-```ruby
+```rb
 class BankAccount
   attr_reader :user_id, :balance
 
@@ -130,7 +130,7 @@ class BankAccount
     @balance = @balance+amount
   end
 
-  def widthdraw(amount)
+  def withdraw(amount)
     @balance = @balance-amount
   end
 
