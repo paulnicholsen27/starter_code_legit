@@ -38,19 +38,27 @@ names[0]
 names.[](0)
 names.send(:[], 0)
 
+# demo here that there is something behind the scenes (in C but whatevs) something like this (good to show that symbols can be part of method name):
+
+class Array
+
+  def [](index)
+    # return element of array at index
+  end
+end
+```
 # objects complain when they don't know how to respond to messages
 # objects complain when they don't know how to execute methods
 names.respond_to_undefined_method
 
 # check if an object responds to a message
 names.respond_to?("some_method")
-```
 
 - build a Cat hash
-- ella = {"name" => "Ella", "fluffiness" => 10}
+- `ella = {"name" => "Ella", "fluffiness" => 10}`
 - This is fine but `ella` is just a hash.  We can't extend this to have any behavior we might want a cat to do.  Make an empty Cat class.
 - `Cat.new`
-```
+```rb
 class Cat
     def name=(name)
         @name = name
@@ -72,7 +80,7 @@ end
 
 - Define getter/setter for name and fluffiness
 - custom getter/setters:
-```
+```rb
     def fluffiness
         if @fluffiness > 5
             return "Very fluffy"
@@ -83,7 +91,7 @@ end
 ```
 
 - add initialize method
-```
+```rb
     def initialize(name, fluffiness)
         @name = name
         @fluffiness = fluffiness
