@@ -1,3 +1,5 @@
+- Have the assignment.md file on projector for students to work on as they settle in
+
 - Map out book / author domain
 - In terms of Database architecture, talk about why the foreign key attribute needs to be on the `belongs_to` model (i.e., the reverse would not make sense, and would need to support an array)
 - Each Ruby class should correspond to one SQL table
@@ -26,37 +28,37 @@
         - Add Rakefile
         - `rake -T` to list all tasks
         - Build rake task
-        ```desc "Says hello"
-task :hi do
-    puts "Hello everyone!"
-end
+        ```rb
+        desc "Says hello"
+        task :hi do
+            puts "Hello everyone!"
+        end
 ```
     - `Pry.start` opens a Pry that I can play with 
 
     - No longer need to do things like a .all method--everything is written to DB
     - HEREDOC:
-    ```
+    ```rb
      <<-SQL
         SQL STATEMENT
     SQL
     ```
 
+- Define `CRUD`
 
-- Give SQL assignment for table groups to work on
+- Build `create_database` rake task (note:  For some reason, the sql create table if not exists commands need to be entered as separate database transactions)
 
-- Build create_database rake task (note:  For some reason, the sql create table if not exists commands need to be answered as separate database transactions)
-
-- Build Author.create
+- Build `Author.create`
     - Need to create a Ruby object
     - Need to save to database
 
-- Build Author#save
+- Build `Author#save`
     - (this is an instance method as opposed to the class method Create)
     - play in the console
     - introduce `last_insert_rowid()`
 
-```    
-def save
+```rb  
+    def save
         # save to database
         sql = "INSERT INTO authors (name) values (?)"
         DB.execute(sql, self.name)
@@ -72,7 +74,7 @@ def save
 ```  
 
 - Build find method
-```
+```rb
     def self.find(id)
         sql = <<-SQL
             SELECT * FROM authors
@@ -89,7 +91,7 @@ def save
 ```
 
 - Build all method
-```
+```rb
   def self.all
         sql = "SELECT * FROM authors"
         results = DB.execute(sql)
@@ -98,7 +100,7 @@ def save
 ```
 
 - Build destroy method
-```
+```rb
     def destroy
         sql = "DELETE FROM authors WHERE id = ?"
         DB.execute(sql, self.id)
@@ -107,7 +109,7 @@ def save
 
 - Update doesn't need a method; Ruby object updated as always, but we need to modify our save method to write to the database
 
-```    
+```rb    
 def save
         # save to database
         if id.nil?

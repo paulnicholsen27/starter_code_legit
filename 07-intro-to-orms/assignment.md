@@ -2,14 +2,6 @@ With a partner/group:
 
 1.  Write the SQL to create tables for Books (id, title, author_id) and Authors (id, name)
 
-CREATE TABLE IF NOT EXISTS books(
-    id INTEGER PRIMARY KEY,
-    title TEXT,
-    author_id INTEGER);
-
-CREATE TABLE IF NOT EXISTS authors(
-    id INTEGER PRIMARY KEY,
-    title TEXT);
 
 2.  Write the SQL to get all Books
 
