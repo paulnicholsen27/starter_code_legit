@@ -1,15 +1,19 @@
+SETUP:  Copy last lecture 'author.rb' final code into here.  Delete everything in db file.  Copy this repo's Gemfile, README.
+
+
 - Go over objectives
 
 - Review author-backup created earlier in the week
 
-- Show Seed file
+- Show empty Seed file and put in a few `find_or_create` statements.  
 
+- show updated gem file.
 - Point out new methods of `find_by_name` and `find_or_create`
 - What is Rake? (review)
 	- Helps to do tasks
 	- For example `rake db:migrate`
 
-get active record
+- get active record
 
 connect to database
 	- in environment file

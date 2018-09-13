@@ -11,30 +11,35 @@
 2.  say what `it` does
 3.  write assertion
 
-- First build the calculator in the first test (add).  When you need to redo it, move it to the top of the describe:
+- First build the palindrome_checker in the first test (add).  When you need to redo it, move it to the top of the describe:
 
-```
-describe "Calculator" do
+```rb
+require_relative "../palindrome.rb"
 
-  let(:calculator) {Calculator.new}
-  
-  it "adds two numbers" do
-    expect(calculator.add(2, 3)).to be 5
-  end
+describe "PalindromeChecker" do
 
-  it "subtracts two numbers" do
-    expect(calculator.subtract(10, 3)).to be 7
-  end
+    let (:checker) {PalindromeChecker.new}
+
+    it "returns true when input is 'dad'" do
+        expect(checker.is_palindrome?('dad')).to be(true)
+    end
+
+    it "ignores spaces" do
+        expect(checker.is_palindrome?('taco cat')).to be(true)
+    end
+
 end
 ```
 
 - point out difference between `to be` (compares object identity equality) to `to eq` (compares value equality)
 
+```rb 
+    it "raises ArgumentError if input is not a string" do
+        expect{ checker.is_palindrome?(7) }.to raise_error ArgumentError
+    end
 ```
-  it "should raise an error if input is a not number" do
-    expect { calculator.add("hi", 5) }.to raise_error ArgumentError
-  end
-```
+- Notice that we need a block as opposed to an argument for a raises test
 
-`raise ArgumentError if !(num1.is_a?(Numeric) && num2.is_a?(Numeric))
-`
+```rb
+raise ArgumentError if !(word.is_a? String)
+```

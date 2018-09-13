@@ -31,12 +31,12 @@ This last command adds a few new files to our directory: `.rspec` which is some 
 
 Peek into the `spec/spec_helper.rb` to get a better sense of what each of these files are doing and why they're here. The [RSpec Configuration documentation](http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration) also provides some helpful tips on configuring RSpec how you'd like it.
 
-Next, we will want to add a file for our program. We've cleverly named ours `calculator.rb` and it will hold all of our application code. We can start by writing a class in here called `Calculator`.
+Next, we will want to add a file for our program. We've cleverly named ours `palindrome.rb` and it will hold all of our application code. We can start by writing a class in here called `PalindromeChecker`.
 
 ```ruby
-# calculator.rb
+# palindrome.rb
 
-class Calculator
+class PalindromeChecker
 end
 ```
 
@@ -50,14 +50,14 @@ We'll break down the technique a little bit more in the following sections, but 
 
 Tests go into the `spec` folder created by the `rspec --init` command. The pattern for naming tests is usually `<some feature>_spec.rb` when using RSpec. When using other testing frameworks for other languages, there may be other conventions, so be sure to read the documentation before writing tests.
 
-We'll create a file called `calculator_spec.rb` and place it in our `spec` folder. Our file structure should look like this now:
+We'll create a file called `palindrome_spec.rb` and place it in our `spec` folder. Our file structure should look like this now:
 
-* calculator.rb
+* palindrome.rb
 * Gemfile
 * .rspec
 * spec/
   * spec\_helper.rb
-  * calculator_spec.rb
+  * palindrome_spec.rb
 
 Spec files are composed of a few pieces. First, you have to require the file that you want to test. This may seem obvious, but it's not done for you automatically.
 
