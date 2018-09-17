@@ -9,7 +9,6 @@
 - View a detail page for an individual book
 
 
-
 - Create a new book
 
 - Edit an existing book
