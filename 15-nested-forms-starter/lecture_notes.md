@@ -18,6 +18,7 @@ end
 ```
     - Add FK relationship from Book to Author
     - `rake db:create_migration NAME=add_author_id_to_books`
+
 ```rb
 class AddAuthorIdToBooks < ActiveRecord::Migration[5.2]
   def change
@@ -29,7 +30,8 @@ end
     - Remove author string from Book schema
     - `rake db:create_migration NAME=remove_author_from_books`
     - Make an Author model (discuss need to make Author in both the database and a Ruby model).  
-    - Update GoogleBooks::Adapter to populate Author table and correctly store Author name while preserving author_url / slug capabilities.  Move the methods from the adapter to the model
+    - Update GoogleBooks::Adapter to populate Author table and correctly store Author name while preserving author_url / slug capabilities.  Move the methods from the adapter to the model. 
+            - What methods go where?  Things that act directly on an Author object should go on the models.
             - new migrations to add author table, add author_id to column to books, remove author column from books
             - create author.rb
             - move slug method into author class
@@ -38,7 +40,7 @@ end
             - add relationship to Book and Author classes
     - create AuthorsController and BooksController (**PLURAL**).  Move book routes into BooksController.  Move the views directory into subdirectory `/books` Specify views at top: `set :views, 'app/views/books'`.  
     - In `config.ru`:
-        ```
+        ```rb
         require_relative './config/environment'
 
         require_relative './app/controllers/authors_controller'
