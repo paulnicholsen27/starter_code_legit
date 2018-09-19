@@ -2,7 +2,11 @@
 - Draw out one-to-many relationship from author to books.  Who should be responsible for holding FK? (Book)
 - Begin with changing application to:
     - Have a separate Author table
-    - `rake db:create_migration NAME=create_author_table`
+    - 
+    ```rb
+    rake db:create_migration NAME=create_author_table
+    ```
+
 ```rb
 class CreateAuthorsTable < ActiveRecord::Migration[5.2]
   def change
