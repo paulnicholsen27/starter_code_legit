@@ -14,7 +14,7 @@
 
  	But Instructor should be a class {IS A BLUEPRINT--INSTRUCTIONS / RECIPES}. When it's just a string, can't really do much.  If they're objects, they have their own methods.
 
- 	flatiron.instructors.map { |instructor| instructor.favorite_food }
+ 	`flatiron.instructors.map { |instructor| instructor.favorite_food }`
 
  	Also, what happens when something changes about an instructor?  If I decide to change my name, how many places do I have to remember to update it?  
 
