@@ -1,3 +1,5 @@
+** YOU NEED TO PRACTICE THIS **
+
 First talk about `Proc`s.  A `Proc` is a type of "Closure", which is a reusable block of code.  It's basically a tiny function.
 
 Example:

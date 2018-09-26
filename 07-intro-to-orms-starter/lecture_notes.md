@@ -12,7 +12,7 @@
     - Bundler.require == requiring all the gems without listing each one at the top
     - DB hash points to instance of a database
     - Just Ruby classes:
-    ```
+    ```rb
     module SQLite3
 
         class Database

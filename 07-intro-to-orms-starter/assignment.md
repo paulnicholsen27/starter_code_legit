@@ -2,7 +2,6 @@ With a partner/group:
 
 1.  Write the SQL to create tables for Books (id, title, author_id) and Authors (id, name)
 
-
 2.  Write the SQL to get all Books
 
 3.  Write the SQL to get all Authors

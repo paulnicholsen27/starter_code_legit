@@ -21,7 +21,7 @@ lecture_notes.md
     - Build this in the wrong directory and show the `rails destroy controller Snacks` command
 - app/controller/snacks_controller.rb
 
-```
+```rb
 class SnacksController < ApplicationController
 
         def index
@@ -38,20 +38,21 @@ end
     - localhost:3000/snacks
 
 - add show route, controller, view.  Will work without restarting.  App folder can change without restart; routes need restart (but I guess not if just changing the only?)
-    - show traditional way of building links, then show `rails routes` again as well as go into `rails c` and show the `app.snacks_path` and other routes `
-    - <%= link_to snack.name, snack_path(snack) %>`
+    - show traditional way of building links, then show `rails routes` again as well as go into `rails c` and show the `app.snacks_path` and other routes
+    - `<%= link_to snack.name, snack_path(snack) %>`
     - add some css somewhere on the page to introduce
         - external stylesheets
         - classes and ids
         - basic css syntax
 
-- add :new :create
-    - @snack = Snack.new
+- add `:new :create`
+    - `@snack = Snack.new`
     - new.html.erb
-    - `form_for` vs `form_tag`
+    - **`form_for` vs `form_tag`**
         -`form_for` represents an ActiveRecord model
         -`form_tag` doesn't, and should be used for custom forms
         - both include csrf validation.  Before defining fields, show the form (with all hidden fields) in the inspector
+
 ```html
 <h1>New Snack:</h1>
 <%= form_for @snack do |f| %>
