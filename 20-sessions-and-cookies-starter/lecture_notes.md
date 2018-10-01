@@ -1,5 +1,4 @@
 - HTTP is "Stateless" - requests don't know about each other
-- washingtonpost.com -- limits me to 3 free articles per month.  How do they know? 
 - Cookies! Small pieces of data sent from a website in the headers and stored on the computer while browsing.  (show in "edit this cookie" Chrome Extension)
 - Domain Specific - show in different windows
 - Add `cookies['favorite'] = "chocolate-chip"` in `SnackController#show`; just a key-value pair (DON'T GO TO SHOW PAGE YET)
@@ -110,7 +109,7 @@ won't work because it's a get request
     - Use `current_user` more than once on a single page
 
     - SHow repeated sql queries in browser/console
-    ```
+    ```rb
     # memoization
     def current_user
         if @current_user
