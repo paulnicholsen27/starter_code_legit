@@ -66,13 +66,15 @@ end
 
 - Put in pry to show params
 
-```
+```rb
     get '/books/:id' do
         @book = Book.find(params[:id])
         erb :show
     end
 ```
 - Change index page to links
+
+**PART ONE ENDS HERE**
 
 ## Create page:
 
