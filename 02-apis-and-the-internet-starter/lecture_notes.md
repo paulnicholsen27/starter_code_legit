@@ -1,3 +1,5 @@
+- "You're no longer an aspiring developer.  You're a developer."
+
 ### Intro
 
 In hasketball couldn't we just have done this instead of going deep into `map`

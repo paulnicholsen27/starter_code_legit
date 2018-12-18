@@ -11,11 +11,11 @@
 
     - Request / Response lifecycle
         - Server / Client
-        - www.google.com
+        - www.example.com (actual website)
             - domain name that is an alias for an ip address
             - ipv4 vs ipv6
             - ipaddress is mapped to domain name through DNS (Domain Name Server)
-        - curl www.google.com
+        - curl www.example.com
         - Types of Requests Get/Post/Put/Patch/Delete
             - Browser only supports Get and Post
 
@@ -33,5 +33,13 @@
                 - 400 - Client Error
                 - 500 - Server Error
         - Look at app.rb and config.ru
-        - `rackup app.rb` and navigate to local host :9292
-        - NOTE FOR NEXT TIME:  BUILD OUT SOME MORE LOCALHOST STUFF
+        - `rackup config.ru` and navigate to local host :9292
+        
+        ```rb
+        req = Rack::Request.new(env)
+
+        if req.path.match(/items/)
+             @@items.each do |item|
+            resp.write "#{item}\n"
+        end
+      ```
