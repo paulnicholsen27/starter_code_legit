@@ -1,6 +1,6 @@
 - explain "Flipped Classroom":  We expect you to see the material before lecture (although not master)
 
-- emphasize asking questions, feeling stupid, saying "I don't know"
+- emphasize asking questions, feeling stupid, saying "I don't know".  Talk about Imposter Syndrome
 
 - Don't code along unless instructed to
 
@@ -26,25 +26,35 @@
 
 ```rb
 instructors = [
-  {name: "Paul", college: "Rutgers"},
-  {name: "Morgan", college: "BYU"},
-  {name: "Melanie", college: "Michigan"}
+  {name: "Paul", mood: "cranky"},
+  {name: "Jake", mood: "happy"},
+  {name: "Melanie", mood: "happy"}
 ]
-
-colleges = instructors.map do |instructor|
-  instructor[:college]
-end
-
-colleges
 ```
-
 `map` for when you are returning an array of equal size
 
 `each` returns the original array
 
+Student Exercise:  
+- # Define a method called get_names that takes an array of instructors and returns just their names.  Try it with `.each` and then `.map`
+
+```rb
+
+names = instructors.map do |instructor|
+  instructor[:name]
+end
+
+names
+```
+
+
 `select` returns an array of all matching elements
 
 `find` returns first
+
+Student Exercise:  
+- # Define a method called find(name) that takes an array of instructors and returns the instructor whose name matches the inputed parameter
+- # Define a method called  find_all_starts_with_
 
 - Build helper methods:
 

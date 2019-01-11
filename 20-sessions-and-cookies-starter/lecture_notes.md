@@ -1,4 +1,4 @@
-- HTTP is "Stateless" - requests don't know about each other
+s- HTTP is "Stateless" - requests don't know about each other
 - Cookies! Small pieces of data sent from a website in the headers and stored on the computer while browsing.  (show in "edit this cookie" Chrome Extension)
 - Domain Specific - show in different windows
 - Add `cookies['favorite'] = "chocolate-chip"` in `SnackController#show`; just a key-value pair (DON'T GO TO SHOW PAGE YET)

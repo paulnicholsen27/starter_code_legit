@@ -88,6 +88,16 @@ end
             return "Not so fluffy"
         end
     end
+
+    def fluffiness=(fluffiness)
+      if @fluffiness > 10
+        @fluffiness = 10
+      elsif < 0
+        @fluffiness = 0
+      else
+        @fluffiness = fluffiness
+      end
+    end
 ```
 
 - add initialize method
