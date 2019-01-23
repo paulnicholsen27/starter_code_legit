@@ -43,3 +43,22 @@ end
 ```rb
 raise ArgumentError if !(word.is_a? String)
 ```
+
+```rb
+        begin
+            1/0
+        rescue ZeroDivisionError
+            puts "You can't divide by zero"
+        end
+```
+
+BAD
+
+```rb
+# // Don't do this 
+begin
+  do_something()
+rescue Exception => e
+  ...
+end
+``
