@@ -2,7 +2,7 @@ First talk about `Proc`s.  A `Proc` is a type of "Closure", which is a reusable 
 
 Example:
 
-```
+```rb
 def gen_times(factor)
   return Proc.new {|n| n*factor }
 end

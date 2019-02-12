@@ -1,6 +1,9 @@
 - `rails g migration CreateJoinTableSnacksUser snack user`
+- in migration:  `create_join_table :snacks, :users, table_name: :favorites`
 
-- `has_and_belongs_to_many on snacks/users`
+- `rails g model Favorite snack_id:integer user_id:integer`
+
+- set up associations on user/snacks/models
 
 
 - form:
@@ -11,7 +14,7 @@
 <%= form_tag favorites_path do %>
     <% Snack.all.each do |s| %>
         <div>
-            <%= check_box_tag "snack_ids[]", s.id %>
+            <%= check_box_tag "snack_ids[]", s.id, current_user.snacks.include?(s) %>
             <%= s.name %>
         </div>
     <% end %>
@@ -20,7 +23,13 @@
 
 ```
 
-- UsersController
+`rails g controller Favorites`
+
+```rb
+  resources :favorites, only: [:new, :create]
+```
+
+- FavoritesController
 ```rb
 def new_favorites
   render :favorite_picker
@@ -42,20 +51,17 @@ end
 ```rb
 
   def index
-    @snacks = current_user.snacks
+    if session[:user_id]
+      @user = User.find(session[:user_id])
+      @snacks = @user.snacks
+    else
+      @snacks = Song.all # or force a login
+    end
   end
 ```
 
 - Log in code
 
-```rb
-if session[:user_id]
-  @user = User.find(session[:user_id])
-  @songs = @user.songs
-else
-  @songs = Song.all # or force a login
-end
-```
 
 Works but will be repetitive:
 ```rb
@@ -78,3 +84,7 @@ Add to application_controller:
       redirect_to login_path unless logged_in?
     end
   ```
+
+Add to all controllers that need it:
+`before_action :authorized`
+(be careful not to include on login page itself)

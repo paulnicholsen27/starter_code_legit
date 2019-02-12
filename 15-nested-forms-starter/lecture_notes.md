@@ -40,20 +40,19 @@ end
             - add relationship to Book and Author classes
     - create AuthorsController and BooksController (**PLURAL**).  Move book routes into BooksController.  Move the views directory into subdirectory `/books` Specify views at top: `set :views, 'app/views/books'`.  
     - In `config.ru`:
-        ```rb
-        require_relative './config/environment'
+    ```rb
+    require_relative './config/environment'
 
-        require_relative './app/controllers/authors_controller'
-        require_relative './app/controllers/books_controller'
+    require_relative './app/controllers/authors_controller'
+    require_relative './app/controllers/books_controller'
 
-        use AuthorsController
-        use BooksController
-        run ApplicationController
-        ```
+    use AuthorsController
+    use BooksController
+    run ApplicationController
+    ```
         * can have multiple `use`
         * only one `run`
     - move books views into folder
-
     - Build `index` and `show` pages for Author
     - Alter book create page to use `book[attribute]` syntax, explicitly entering the author_id
     - Alter Book create pages to have an author dropdown
@@ -69,13 +68,13 @@ end
 
     - When creating a new author we should be able to simultaneously create books.
         - First add to the form a single book:
-        ```
-            <input type="text" name="book[title]" placeholder="Title">
-            <input type="textarea" name="book[][snippet]" placeholder="Snippet"> 
-        ```
+```rb
+    <input type="text" name="book[title]" placeholder="Title">
+    <input type="textarea" name="book[][snippet]" placeholder="Snippet"> 
+```
         - Show `params` in pry
         - Then multiple books (note the `[]`) and show in pry
-        - ```
+        ```rb
         <input type="text" name="book[][title]" placeholder="Title">
         <input type="textarea" name="book[][snippet]" placeholder="Snippet">
         ```

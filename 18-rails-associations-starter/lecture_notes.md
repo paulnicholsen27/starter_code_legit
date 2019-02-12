@@ -92,3 +92,12 @@ retailers new.html.erb
             <% end %>
     <% end %>
 ```
+
+Nested URLs:
+
+```
+    resources :snacks
+    resources :retailers do
+      resources :snacks, {only: [:index, :show]}
+    end
+```
