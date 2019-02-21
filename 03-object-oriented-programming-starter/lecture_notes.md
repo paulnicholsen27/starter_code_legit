@@ -9,42 +9,22 @@ puts x
 # what is split and where does it come from?
 # how does x know what to do with split?
 # what's happening when we run this code?
-x = "hello how are you"
-x.split
+x = "flatiron"
+x.length
 ```
 
 ```rb
-x = 3
+class String
 
-# what does message name mean here?
-message_name = :+
-
-# what does send do?
-# what does the argument to send specify?
-# what other arguments does send take?
-x.send(message_name, 1) == x + 1
-
-# most operators in Ruby are just messages sent to objects
-names = [
-  "Ian",
-  "Sophie",
-  "JJ",
-  "Rishi",
-  "Johann",
-  "Esmery",
-  "Terrance"
-]
-names[0]
-names.[](0)
-names.send(:[], 0)
-
-# demo here that there is something behind the scenes (in C but whatevs) something like this (good to show that symbols can be part of method name):
-
-class Array
+  def length
+    # write pseudocode for length
+  end
 
   def [](index)
-    # return element of array at index
+    # get char at index
+    # note that punctuation treated just like letters
   end
+
 end
 ```
 # objects complain when they don't know how to respond to messages
