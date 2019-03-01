@@ -14,7 +14,7 @@
 ## ActiveRecord Modeling Conventions
 - file called `doctor.rb` defines a class `Doctor`
 - table is called `doctors`
-- migration often called `create_doctors`
+- migration often called `create_doctors`; file name and class name must match (words, not title case)
 `belongs_to :doctor`
 `has_many :patients`
 
@@ -29,4 +29,10 @@
 2. run migration
 3. create the model
 
+## Domain
+
+- One patient can have multiple doctors
+- One doctor can have multiple patients
+- A doctor belongs to a single hospital
+- One hospital can have many doctors
 
