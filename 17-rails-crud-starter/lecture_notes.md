@@ -52,7 +52,9 @@ end
         -`form_for` represents an ActiveRecord model
         -`form_tag` doesn't, and should be used for custom forms
         - both include csrf validation.  Before defining fields, show the form (with all hidden fields) in the inspector
-
+        - `form_for`s is a bit easier to use for creating forms for a model object because it figures out what url to use and what http method to use depending on whether the object is a new record or a saved record.
+        - Rails 5 will replace both of these with `form_with`
+        
 ```html
 <h1>New Snack:</h1>
 <%= form_for @snack do |f| %>

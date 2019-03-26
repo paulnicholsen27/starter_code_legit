@@ -2,7 +2,8 @@
 
 - emphasize asking questions, feeling stupid, saying "I don't know".  Talk about Imposter Syndrome
 
-- Don't code along unless instructed to
+- Coding along is difficult and may not be the best way to learn.  If you choose to, you can pull code at any time.
+  - At this point, show how to clone down entire lecture repo.  Also discuss fork vs clone
 
 - Video and code made available after lecture
 

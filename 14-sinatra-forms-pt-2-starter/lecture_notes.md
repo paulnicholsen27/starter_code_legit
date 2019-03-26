@@ -20,13 +20,12 @@
 
 - put pry in post to see
 
-- make the long way first, point out we're just recreating params
+- make the long way first, point out we're just recreating params.  Talk about how mass assignment is a security risk.
 ```rb
     post '/books' do 
-        # author = params[:author]
-        # title = params[:title]
-        # snippet = params[:snippet]
-        Book.create(params)
+        author = params[:author]
+        title = params[:title]
+        snippet = params[:snippet]
     end
 ```
 

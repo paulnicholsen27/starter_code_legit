@@ -45,11 +45,14 @@ raise ArgumentError if !(word.is_a? String)
 ```
 
 ```rb
-        begin
-            1/0
-        rescue ZeroDivisionError
-            puts "You can't divide by zero"
-        end
+def divide_by(dividend, divisor)
+  begin
+    return dividend / divisor
+  rescue ZeroDivisionError => e
+    puts e
+    return "You can't divide by zero"
+  end
+end
 ```
 
 BAD
