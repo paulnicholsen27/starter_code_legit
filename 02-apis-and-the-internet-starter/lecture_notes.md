@@ -1,4 +1,6 @@
 - "You're no longer an aspiring developer.  You're a developer."
+- Make sure students have cloned down code repo
+- Do Now / Discussion Questions
 
 ### Intro
 
@@ -101,7 +103,7 @@ Start writing all the code all in one big block. It will get messy as you start 
 Getting back `nil` is fine, but trying to do something to `nil` is an issue. `nil` doesn't respond to the message `join`, etc.
 
 ```ruby
-if  book["volumeInfo"]["authors"]
+if book["volumeInfo"]["authors"]
  authors = book["volumeInfo"]["authors"].join(" and ")
 else
  authors = "No authors found"
@@ -110,16 +112,14 @@ end
 
 ```ruby
 if  book["volumeInfo"]["description"]
- description  = book["volumeInfo"]["description"][0..140]
+ description = book["volumeInfo"]["description"][0..140]
 else
  description = "No description available"
 end
 ```
 
 All this logic in one big block will get messy and the code is not great.
-
-> **Q:** What principle did we mention yesterday that we are breaking?  
-> **A:** Single responsibility
+Introduce **Single Responsibility Principle**: Every method should have one purpose
 
 ### Student Exercise
 
@@ -132,7 +132,7 @@ All this logic in one big block will get messy and the code is not great.
 
 ### Refactoring with Single Responsibility Principle
 
-Build out methods like `get_authors` or `get_title` Ask students to detemrine what are good candidates for further _Encapsulation_ \(&lt;- define\)
+Build out methods like `get_authors` or `get_title` Ask students to determine what are good candidates for further _Encapsulation_ \(&lt;- define\)
 
 end with code like this:
 

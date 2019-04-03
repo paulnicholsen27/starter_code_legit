@@ -23,13 +23,13 @@
 
 - Define `num_points_scored`.  When you get to the second test, a lot of code is going to end up being repeated.  Define `get_all_players` and `get_player_info` as "helper methods"
 
-- Discuss map vs each, select vs find.  Do some examples with numbers and stuff
+- Discuss map vs each, select vs find.  Do some examples with numbers and stuff.  Note that they all leave the original array unchanged
 
 ```rb
 instructors = [
-  {name: "Paul", mood: "cranky"},
-  {name: "Jake", mood: "happy"},
-  {name: "Melanie", mood: "happy"}
+  {name: "Paul", role: "lead"},
+  {name: "Jake", role: "TCF"},
+  {name: "Melanie", role: "TCF"}
 ]
 ```
 `map` for when you are returning an array of equal size

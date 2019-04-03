@@ -6,8 +6,8 @@ puts x.class
 puts x
 
 # what happens when we run this code?
-# what is split and where does it come from?
-# how does x know what to do with split?
+# what is length and where does it come from?
+# how does x know what to do with length?
 # what's happening when we run this code?
 x = "flatiron"
 x.length
