@@ -35,8 +35,8 @@ class Puppy
 end
 
 fido = Puppy.new("Fido")
-puts fido.cuteness == 5
+puts fido.cuteness == 5 # test initial cuteness
 fido.take_a_bath
-puts fido.cuteness == 8
+puts fido.cuteness == 8 # test that take a bath raises cuteness by 3
 fido.take_a_bath
-puts fido.cuteness == 10
+puts fido.cuteness == 10 # test that cuteness cannot exceed 10
