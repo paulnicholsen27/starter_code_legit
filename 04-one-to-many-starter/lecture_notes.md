@@ -1,39 +1,11 @@
 - Make a note of blog presentations next week
 
-- Discussion question code:
-```rb
-class FunnyBots  
- 
-    attr_accessor :name, :quotes  
- 
-    @@bots = []
- 
-    def initialize(name, quotes)
-      @name = name
-      @quotes = quotes
-      @@bots << self
-    end
- 
-   def random_quote
-      self.quotes.sample
-    end
- 
-    def self.bots
-      @@bots
-    end
- 
-end
- 
-  archer = FunnyBots.new("Archer", ["Danger Zone!", "Read a book", "The cumulative hangover would literally kill me"] )
-```
-
-Discussion questions:
-```
-A. What is self in this line @@bots << self ?
-B. What is self in this line self.quotes.sample?
-C. What kind of method is this & what is self? def self.bots @@bots end
-D. Will this work archer.bots? If not, why?
-```
+- Review Do Now
+    - Issues:
+        - Duplicated code
+        - Not using getter/setter methods
+        - Point out attr_reader and review
+        - Walk through initialize method--make sure they realize it is not limited to setting attribute values
 
  ## Review so far
  	- We can create a class, which is a blueprint for a "model", which represents an object.

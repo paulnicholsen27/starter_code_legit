@@ -48,6 +48,28 @@
 
 - Build `create_database` rake task (note:  For some reason, the sql create table if not exists commands need to be entered as separate database transactions)
 
+```rb
+desc "Set up database"
+task :db_setup do
+    book_sql = <<-SQL
+        CREATE TABLE IF NOT EXISTS books(
+            id integer PRIMARY KEY,
+            title varchar(255),
+            author_id integer
+        );
+    SQL
+    DB.execute(book_sql)
+
+    author_sql = <<-SQL
+        CREATE TABLE IF NOT EXISTS authors(
+            id integer PRIMARY KEY,
+            name varchar(255)
+        );
+    SQL
+    DB.execute(author_sql)
+end
+```
+
 - Build `Author.create`
     - Need to create a Ruby object
     - Need to save to database
