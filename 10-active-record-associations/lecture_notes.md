@@ -1,3 +1,5 @@
+- Have students sketch out domain as Do Now
+
 - Migrations *must* have their class name and file name match
 - Convention for models is `patient.rb` contains `Patient` model
 - Start with Doctor / Hospital

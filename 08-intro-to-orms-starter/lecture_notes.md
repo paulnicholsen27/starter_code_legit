@@ -7,6 +7,7 @@
 - Each Ruby attribute should correspond to a single column in a table
 
 - Introduce Environment and Gemfile
+    - `.gitignore`
     - `bundle install` adds Gems in Gemfile and their dependencies
     - Point out Gemfile.lock
     - Bundler.require == requiring all the gems without listing each one at the top
@@ -19,6 +20,10 @@
 
             def initialize(filename)
             ...
+            end
+
+            def execute(sql)
+
             end
         end
 

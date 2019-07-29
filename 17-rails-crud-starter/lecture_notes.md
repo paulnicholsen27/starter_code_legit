@@ -94,9 +94,8 @@ end
 - add form_tag (custom form so not form_for) to edit page
 
 ```rb
-    <%= form_tag @snack, method: "DELETE" do %>
-        <%= submit_tag "Delete" %>
-    <% end %>
+    <%= link_to 'Destroy this snack', snack_path(@snack),
+            data: {:confirm => 'Are you sure?'}, :method => :delete %>
 ```
 
 ```rb

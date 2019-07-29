@@ -24,11 +24,11 @@ times3.call(times5.call(4))   #=> 60
     - shouldn't have duplicate info
 
 # snack.rb
-
+```
   validates :name, presence: true
   validates :calories, presence: true
   validates :deliciousness, presence: true
-
+```
   - Snack should have name, calories, deliciousness
   - Why bother with `deliciousness` if there's no way to _not_ put in a value in the form based on the dropdown?
       - Answer:  Forms are just one way to add data (console, data migrations, seeds, etc)
@@ -41,11 +41,12 @@ times3.call(times5.call(4))   #=> 60
 #snacks_controller.rb
 ```rb
   def create
-    @snack = Snack.create(accepted_params)
-    if @snack.errors
-      render :new
-    else
+    @snack = Snack.new(accepted_params)
+    if @snack.valid?
+      @snack.save
       redirect_to snack_path(@snack)
+    else
+      render :new
     end
   end
 ```
