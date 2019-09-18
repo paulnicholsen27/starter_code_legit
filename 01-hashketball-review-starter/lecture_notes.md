@@ -15,7 +15,7 @@
 
 - Don't cut and paste, both for understanding and for muscle memory
 
-- TDD
+- TDD - what is it?
 
 - Don't do too much at once--tight feedback loop.  Success is often defined as a new error.
 
@@ -23,7 +23,7 @@
 
 - Define `num_points_scored`.  When you get to the second test, a lot of code is going to end up being repeated.  Define `get_all_players` and `get_player_info` as "helper methods"
 
-- Discuss map vs each, select vs find.  Do some examples with numbers and stuff.  Note that they all leave the original array unchanged
+- Discuss `map` vs `each`, `select` vs `find`.  Do some examples with numbers and stuff.  Note that they all leave the original array unchanged
 
 ```rb
 instructors = [

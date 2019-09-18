@@ -53,7 +53,10 @@ end
         * can have multiple `use`
         * only one `run`
     - move books views into folder
+
+    ** Pair work -- will take a while **
     - Build `index` and `show` pages for Author
+
     - Alter book create page to use `book[attribute]` syntax, explicitly entering the author_id
     - Alter Book create pages to have an author dropdown
     ```
@@ -67,10 +70,10 @@ end
     ```
 
     - When creating a new author we should be able to simultaneously create books.
-        - First add to the form a single book:
+        - First add a single book to the form :
 ```rb
     <input type="text" name="book[title]" placeholder="Title">
-    <input type="textarea" name="book[][snippet]" placeholder="Snippet"> 
+    <input type="textarea" name="book[snippet]" placeholder="Snippet"> 
 ```
         - Show `params` in pry
         - Then multiple books (note the `[]`) and show in pry
