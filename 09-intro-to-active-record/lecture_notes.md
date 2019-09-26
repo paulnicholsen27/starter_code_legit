@@ -60,7 +60,7 @@ http://api.rubyonrails.org/classes/ActiveRecord/Tasks/DatabaseTasks.html
 Gemfile
     gem 'activerecord'
     gem 'sinatra-activerecord'
-[INCOMPLETE]
+[etc]
 
 ```rb
 config/database.yml
@@ -90,11 +90,15 @@ Make a migration
     up/down vs change
 
 ```rb
-class CreateArtists < ActiveRecord::Migration
+rake db:create_migration NAME=create_books_table
+```
+
+```rb
+class CreateBooksTable < ActiveRecord::Migration
 
     def change
-        create_table :artists do |t|
-            t.string :name
+        create_table :books do |t|
+            t.string :title
         end
     end
 
@@ -111,3 +115,25 @@ sqlite3 db/test.db
 .schema artists
 
 add a column
+`rake db:create_migration NAME=add_rating`
+
+```rb
+class AddRating < ActiveRecord::Migration
+
+    def change
+        add_column :books, :rating, :integer
+    end
+
+end
+```
+
+AR Methods to show: (show docs with lots of other methods)
+`.all`
+`find`
+`find_by` 
+`where`
+`create`
+`find_or_create_by`
+`Book.order(rating: :desc)`
+`.limit(5)`
+
