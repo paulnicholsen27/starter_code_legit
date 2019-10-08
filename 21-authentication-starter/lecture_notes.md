@@ -128,3 +128,33 @@ OR
   end
 end
 ```
+
+
+- Log in code
+
+
+Works but will be repetitive:
+```rb
+  def new
+    if current_user
+      @snack = Snack.new
+    else
+      redirect_to login_path
+    end
+  end
+  ```
+
+Add to application_controller:
+```rb
+    def logged_in?
+        !!current_user
+    end
+
+    def authorized
+      redirect_to login_path unless logged_in?
+    end
+  ```
+
+Add to all controllers that need it:
+`before_action :authorized`
+(be careful not to include on login page itself)
