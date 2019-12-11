@@ -1,11 +1,16 @@
 # Rails API
-- Dynamic web pages with JS front end and Rails backend
 - Single page application
+- Dynamic web pages with JS front end and Rails backend 
+  - Make fetch calls to get JSON data
 
 ### Why?
-- Response with request for data with data (json)
 - Manage large database (update/add rows)
 - Use relationship between models
+
+### PLAN, PLAN, PLAN
+- wireframing and models diagrams
+- build 'vertically' (front end and back end simulatiously)
+- feature by feature
 
 ### Getting Started
 `rails new <app_name> --api --database=postgresql`
@@ -19,6 +24,8 @@
 - Cross Origin Resource Sharing
 
 ### Serializers
+- Decide how we want to format our data
+- what we don't want and what additional data we DO want
 
 ##### Custom Serializers
 

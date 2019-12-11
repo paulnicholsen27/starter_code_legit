@@ -50,6 +50,32 @@ module Mammal
 end
 ```
 
+# using class vs instance methods from an inherited module
+```rb
+module Something
+
+    module InstanceMethods
+
+        def say_hi
+            puts "hi"
+        end
+    end
+
+    module ClassMethods
+
+        def hello
+            puts "hello"
+        end
+    end
+
+end
+
+class Dog < Animal 
+    extend Something::ClassMethods
+    include Something::InstanceMethods
+end
+```
+
 # Private vs Public methods
 
 ```rb
