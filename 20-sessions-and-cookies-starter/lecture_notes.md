@@ -68,6 +68,10 @@ def create
     <% end %>
 ```
 
+- to suppress above code on login page:  
+`    <% unless controller_name == "sessions" && action_name == "new" %>
+`
+
 - Demonstrate deleting the session
 
 Build logout
@@ -75,7 +79,7 @@ Build logout
 routes.rb
 - `delete '/logout', to: 'sessions#destroy', as 'logout'`
 SessionsController#destroy
-```
+```rb
 def destroy
     session.clear
     redirect_to login_path

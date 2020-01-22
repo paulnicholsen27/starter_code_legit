@@ -55,7 +55,7 @@ end
       @user = User.find(session[:user_id])
       @snacks = @user.snacks
     else
-      @snacks = Song.all # or force a login
+      @snacks = Snack.all # or force a login
     end
   end
 ```

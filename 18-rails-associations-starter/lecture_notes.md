@@ -53,6 +53,7 @@ class Retailer < ApplicationController
   def new
     @retailer = Retailer.new
     @retailer.snacks.build
+    # later change to 3.times { @retailer.snacks.build }
   end
 
   def create
@@ -70,7 +71,7 @@ end
 ```
 
 retailers new.html.erb
- - You might be tempted to allow multiple snacks here but form will process the empty ones
+ - Allow multiple snacks here but form will process the empty ones
 ```html
 
     <h1>New Retailer</h1>
@@ -93,9 +94,16 @@ retailers new.html.erb
     <% end %>
 ```
 
+to fix blank snacks:
+ ```rb
+  # retailer.rb
+ accepts_nested_attributes_for :snacks,
+   :reject_if     => :all_blank
+ ```
+
 Nested URLs:
 
-```
+```rb
     resources :snacks
     resources :retailers do
       resources :snacks, {only: [:index, :show]}
