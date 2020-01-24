@@ -24,4 +24,4 @@
 3. The names of all cereals manufactured by General Mills?
 4. Any cereal with calories between 80 and 100?
 5. All cereals with calories between 80 and 100?
-6. For each cereal, render it's name on the DOM
+6. For each cereal, render its name on the DOM

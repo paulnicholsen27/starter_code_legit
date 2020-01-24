@@ -1,6 +1,6 @@
 const manufacturers = {
   N: "Nabisco",
-  K: "Kellogs",
+  K: "Kelloggs",
   G: "General Mills",
   P: "Post",
   Q: "Quaker",
