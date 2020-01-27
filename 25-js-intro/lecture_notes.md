@@ -5,7 +5,7 @@
 
 - Show some ways to open index.html (copy the path, open in browser, `open index.html`)
 
-- Show script tag.  Demo a `console.log` to make sure it's hooked up
+- Show script tag.  Demo a `console.log`, first inline then with `src="script.js"` to make sure it's hooked up
 
 - define some variables and show they are defined in the console.  show that JS code can be executed from the console
 
