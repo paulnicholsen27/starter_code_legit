@@ -125,6 +125,8 @@ do again with `let`.  Works as expected because `let` (and `const`) have block s
 Scope chain:
     - starts in immediate, inner-most scope and then goes up to parent scope.  This is one of the reasons why global variables are dangerous
 
+- Demo for later exercise that `console.log(cerealData)` works because both files are required in index.html (but fails if the order is switched)
+
 ## Callbacks
 
 ```js
