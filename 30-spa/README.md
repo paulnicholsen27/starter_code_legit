@@ -24,9 +24,7 @@ body: JSON.stringify({
 ```
 
 ### Building out the frontend (Deliverables)
-- See all Pokemon sprites
-- Create your own Pokemon
-- Delete a Pokemon on click
+
 
 ### Notes:
 - [Documentation of using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)

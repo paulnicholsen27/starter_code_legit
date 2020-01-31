@@ -11,11 +11,6 @@
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
     },
     {
-      "id": 3,
-      "name": "venusaur",
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
-    },
-    {
       "id": 4,
       "name": "charmander",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
@@ -44,11 +39,6 @@
       "id": 9,
       "name": "blastoise",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png"
-    },
-    {
-      "name": "Caterpie",
-      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png",
-      "id": 10
     }
   ]
 }
