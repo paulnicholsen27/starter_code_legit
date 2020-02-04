@@ -40,7 +40,7 @@ function createCat(e) {
   e.preventDefault()
   let catName = event.target.name.value // need name attribute on form
   let catImage = event.target.image.value
-  let catBreed = event.target.breed.value
+  // let catBreed = event.target.breed.value
   fetch("http://localhost:3000/cats", {
     method: "POST",
     headers: {"Content-Type": "application/json"},

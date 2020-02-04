@@ -22,7 +22,7 @@ Objective:
 
 - Build the static stuff first, as shown in initial index.html (already done pre-lecture)
 
-- `rails new catsbackend --api --database=postgresql`
+- `rails new cats-  backend --api --database=postgresql`
 
 - generate the new resources.  don't need any views.  just need models and controllers
 
