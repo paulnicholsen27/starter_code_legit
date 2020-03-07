@@ -3,10 +3,10 @@
 ```rb
 def ApplicationController < Sinatra::Base
 
-    get "funtimes/:first_number/:second_number/:third_number"
-        @first = params[:first_number]
-        @second = params[:second_number]
-        @third = params[:third_number]
+    get "funtimes/:first_number/:second_number/:third_number" do
+        @first = params[:first_number].to_i
+        @second = params[:second_number].to_i
+        @third = params[:third_number].to_i
         erb :do_now
     end
 

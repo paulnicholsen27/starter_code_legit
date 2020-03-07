@@ -1,5 +1,7 @@
 - uncomment bcrypt in Gemfile
-
+  - one-way hash
+  - starts by prepending a unique 'salt'.  stored in plaintext but makes everyone's hashes unique
+  
 - add `has_secure_password` to User model
 
 - add password_digest in a migration

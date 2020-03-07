@@ -1,8 +1,8 @@
 Re-emphasize:
-    - Because JS is so flexible, you have to learn what's working on, not just the patterns
+    - Because JS is so flexible, you have to learn what's happening, not just the patterns
     - Make no assumptions--verify everything in a console.log or a debugger
 
-Open `index.html` in terminal.  Review different ways to open (`open .`, "Open in Browser" from Sublime).  Good time to point out how URLs find resources in a file path vs a web address
+Open `index.html` in terminal. 
 
 HTML (file) vs elements in browser (DOM).  DOM is a tree of nodes.  They are very similar but different.  HTML is a static file that the browser parses into an object called document.  (show `document` in console)
 
@@ -43,7 +43,7 @@ with a partner, use Javascript to change the Wikipedia DOM page to be on a topic
 
 - practice DOM manipulation on sample site.  Build `addInstructor(firstName, lastName, email)`
 
-- start by console.log(tbody).  move script tag to head and show that it doesn't console.log; body doesn't exist yet when we called that
+- start by `console.log(tbody)`.  move script tag to head and show that it doesn't console.log; tbody doesn't exist yet when we called that
 
 - sketch out tree structure of table / row
 
