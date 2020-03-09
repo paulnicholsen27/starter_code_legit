@@ -2,7 +2,6 @@ Re-emphasize:
     - Because JS is so flexible, you have to learn what's working on, not just the patterns
     - Make no assumptions--verify everything in a console.log or a debugger
 
-Open `index.html` in terminal.  Review different ways to open (`open .`, "Open in Browser" from Sublime).  Good time to point out how URLs find resources in a file path vs a web address
 
 HTML (file) vs elements in browser (DOM).  DOM is a tree of nodes.  They are very similar but different.  HTML is a static file that the browser parses into an object called document.  (show `document` in console)
 
@@ -79,12 +78,12 @@ function makeTableRow(firstName, lastName, email) {
 
 could do something like
 
-tbody.innerHtml += `
+```js
+tbody.innerHtml += 
  <tr>
     <td class="firstName">${firstName}</td>
-...
   </tr>
-  `
+```
 
 
 but this 
