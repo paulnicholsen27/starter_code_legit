@@ -3,9 +3,11 @@
     - Web was slow with a terrible user experience; applications were faster.
     - Front-End Web Development is all HTML, CSS, and JS
 
-- Show some ways to open index.html (copy the path, open in browser, `open index.html`)
+- Show some ways to open index.html (copy the path (URL is a resource locator, not a webpage!) open in browser, `open index.html`)
 
 - Show script tag.  Demo a `console.log`, first inline then with `src="script.js"` to make sure it's hooked up
+
+`<script type="text/javascript" src="./script.js"></script>`
 
 - define some variables and show they are defined in the console.  show that JS code can be executed from the console
 
@@ -90,13 +92,21 @@ print("Bob") //works fine
     ```
 - Functions
     ```js
-    let crazyObj = {key1: [1, 2, function(){return function(){return function(){return 7}}}]}
-    crazyObj.key1[2]()()()
+    let crazyObj = {key1: [1, 2, function(){return function(){return 27}}]}
+    crazyObj.key1[2]()()
     ```
 
 ### `==` vs `===`
 - `==` is loose comparison.  `1 == "1"` is true
 - `===` is strict.  `1 === "1"` is false
+
+```js
+0 == "0" //true
+0 == [] //true
+[] == "0" //false
+```
+
+- show js equality table (bookmarked in chrome)
 
 ### Pass by value vs Pass by reference
 
