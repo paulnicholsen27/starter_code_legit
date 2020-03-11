@@ -1,3 +1,5 @@
+** Wake up "https://animal-farm-api.herokuapp.com/animals" before starting **
+
 - Final pillar (after DOM manipulation and Events) is Server-Side Communication
     - Often called AJAX (Asychronous JS and XML).  Outdated but name stuck (usually JSON now)
 
@@ -35,11 +37,10 @@ getHTTP("https://www.reddit.com/.json", function(){
 - `let promise = fetch('http://localhost:3000/hello/5')`
 - `promise.then((response) => {console.log("done", response)})`
 
-- Show chaining `.then`
 
-- Response object is not super useful
-
-- `.then().then()`
+- Response object is not super useful; needs to be converted to JSON so we can use it
+- `let fetch_result = fetch("http://localhost:3000/hello/5").then(response => response.json())`
+- `.then()` returns a Promise, so we can chain `.then()`s
 
 - Easier to read, easier to manage
 
@@ -53,9 +54,7 @@ let promise = fetch("https://animal-farm-api.herokuapp.com/animals")
 ```js
 let promise = fetch("https://animal-farm-api.herokuapp.com/animals")
     .then(response => response.json())
-    .then(data => {
-        console.log(data)
-    })
+    .then(data => console.log(data))
 ```
 
 ```js

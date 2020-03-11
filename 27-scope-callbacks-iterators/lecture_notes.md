@@ -93,7 +93,7 @@ let addOneToNumber = num => num + 1
     ```
 
 ```js
-let teacher = "Paul"
+let teacher = "Flitwick"
 function someFunction() {
     let teacher = "Dumbledore"
     console.log("inside function: ", teacher)
@@ -103,10 +103,33 @@ someFunction()
 console.log("in global scope:", teacher)
 ```
 
-above works because inner function variable is limited to the scope of that function.  other teacher is global (which is bad)
+above works because inner function variable is limited to the scope of that function.  other teacher is global (which is bad).  Why is global scope bad?
 
 ```js
-let teacher = "Paul"
+
+function favoriteTeacher() {
+    teacher = "Snape"
+    if (teacher) {
+        console.log(`My favorite professor is ${teacher}`)
+    } else {
+        console.log("I haven't chosen a favorite!")
+    }
+}
+
+
+function something() {
+    if (teacher) {
+        console.log(`My favorite professor is ${teacher}`)
+    } else {
+        console.log("I haven't chosen a favorite!")
+    }
+}
+```
+after `favoriteTeacher()` is invoked, `teacher` will be incorrectly defined.  Also, if you create a second .js file with a function called `teacher()`, the global variable will overwrite it
+
+
+```js
+let teacher = "Flitwick"
 function someFunction() {
     var teacher = "Dumbledore"
     if(true){

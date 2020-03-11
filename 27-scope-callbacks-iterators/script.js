@@ -1,16 +1,18 @@
-console.log('connected')
+
+function favoriteTeacher() {
+    teacher = "Snape"
+    if (teacher) {
+        console.log(`My favorite professor is ${teacher}`)
+    } else {
+        console.log("I haven't chosen a favorite!")
+    }
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-console.log(cerealData)
+function something() {
+    if (teacher) {
+        console.log(`My favorite professor is ${teacher}`)
+    } else {
+        console.log("I haven't chosen a favorite!")
+    }
+}
