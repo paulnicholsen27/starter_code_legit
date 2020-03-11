@@ -1,3 +1,7 @@
+## Objectives
+- SWBAT make a GET fetch call to a third-party data source
+- SWBAT unwrap the promise and use the data
+
 ## AJAX, Promises, and Fetch (Communicating with APIs)
 - What is AJAX? Async JavaScript and XML
 - What is blocking (sync) vs non-blocking code (async)?

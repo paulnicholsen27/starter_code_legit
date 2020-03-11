@@ -102,6 +102,8 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 ```
 
+- Partner activity in activity.md
+
 # Error catching
 
 ```js
