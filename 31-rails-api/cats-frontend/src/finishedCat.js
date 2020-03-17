@@ -8,7 +8,6 @@ function renderCat(cat) {
     let catContainer = document.querySelector("#cats")
     let catDiv = document.createElement("div")
     catContainer.appendChild(catDiv)
-    // show look up semantic docs for card 
     catDiv.classList.add("ui", "card")
     catDiv.innerHTML = `  <div class="image">
     <img src=${cat.image}>

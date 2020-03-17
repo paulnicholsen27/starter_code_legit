@@ -22,7 +22,7 @@ Objective:
 
 - Build the static stuff first, as shown in initial index.html (already done pre-lecture)
 
-- `rails new cats-  backend --api --database=postgresql`
+- `rails new cats-backend --api --database=postgresql`
 
 - generate the new resources.  don't need any views.  just need models and controllers
 
@@ -33,7 +33,7 @@ Objective:
 
 - build out controllers and index routes for hobbies but `render json: Hobby.all` instead of a view
 
-- Try in console on backend page and it works, but it will fail on frontend because of CORS.
+- Try in console on backend page and it works, but it will fail on frontend because of CORS:
 
 ```
 fetch("http://localhost:3000/hobbies").then(res => res.json()).then(j => console.log(j))
@@ -74,7 +74,7 @@ function renderCat(cat) {
     catDiv.classList.add("ui", "card")
 
     // note this wipes out any event listeners but I just created the card so I know I'm OK
-    catDiv.innerHTML = ` <div class="image">
+    catDiv.innerHTML = `<div class="image">
     <img src=${cat.image}>
   </div>
   <div class="content">
