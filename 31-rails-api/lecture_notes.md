@@ -78,10 +78,7 @@ function renderCat(cat) {
     <img src=${cat.image}>
   </div>
   <div class="content">
-    <a class="header">${cat.name}</a>
-    <div class="meta">
-      <span class="date">Joined in 2013</span>
-    </div>
+    <div class="header">${cat.name}</div>
     <div class="description">
         ${cat.name} is a ${cat.breed}.
     </div>
