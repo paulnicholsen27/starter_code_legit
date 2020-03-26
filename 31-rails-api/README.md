@@ -9,7 +9,7 @@
 
 ### PLAN, PLAN, PLAN
 - wireframing and models diagrams
-- build 'vertically' (front end and back end simulatiously)
+- build 'vertically' (front end and back end simultaneously)
 - feature by feature
 
 ### Getting Started
