@@ -54,7 +54,7 @@ let paul = {
 
 now we are passing by reference and `paul.greet === ann.greet`
 
-If we call greet() and put in a debugger, `this` is Window object again.  **The value of `this` changes depended on where the function is invoked**.  window.firstName is undefined.  We can set it if we want
+If we call `greet()` (not `paul.greet()`)and put in a debugger, `this` is Window object again.  **The value of `this` changes depended on where the function is invoked**.  window.firstName is undefined.  We can set it if we want (show this: it's important later in the movie)
 
 - invoke greet() by adding EventListener to button and show that `this` is the button that was clicked
 
@@ -64,7 +64,7 @@ If we call greet() and put in a debugger, `this` is Window object again.  **The 
     strict mode also keeps `this` from being the window, so we can be sure it only refers to instances as we like.  
     show `this` in `greet()` with and without strict mode
 
-- make multiple buttons and give click handler of `greet`.  
+- make multiple buttons and give click handler of `greet`.  (don't use `forEach`--you'll have to write it out later anyway)
 
 - two ways to change what `This` is:
     - `.bind` (show docs) creates brand-new function with `this` set to provided value
