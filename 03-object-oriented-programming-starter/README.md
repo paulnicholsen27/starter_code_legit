@@ -1,5 +1,5 @@
 
-## SWBATs
+## Objectives
 
 * Define `object` in programming domain
 * Create a class and instantiate an instance of the class

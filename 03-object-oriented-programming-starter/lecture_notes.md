@@ -1,3 +1,5 @@
+- What is an Object?  Everything.  Just like everything in real life is a "thing" with certain properties (mass, molecular structure, temperature) every Ruby "thing" is in this Object class with certain predefined methods.  `thing = Object.new; puts thing.methods`
+
 ```ruby
 # what is the data type of x?
 # what is the value of x?

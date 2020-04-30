@@ -8,6 +8,8 @@ SETUP:  Copy last lecture 'author.rb' final code into here.  Delete everything i
 - Show empty Seed file and put in a few `find_or_create` statements.  
 
 - show updated gem file.
+- show .gitignore
+
 - Point out new methods of `find_by_name` and `find_or_create`
 - What is Rake? (review)
     - Helps to do tasks
@@ -17,51 +19,17 @@ SETUP:  Copy last lecture 'author.rb' final code into here.  Delete everything i
 
 connect to database
     - in environment file
-    old way:
+
+### old way:
 ```rb
     require 'sqlite3'
     require 'require_all'
     require_all 'lib'
     # setting up the database connection (old way)
-    DB = SQLite3::Database.new("chinook.db")
+    DB = SQLite3::Database.new("my_database.db")
 ```
 
-new way:
-
-```rb
-    ActiveRecord::Base.establish_connection({
-    adapter: 'sqlite3',
-    database: 'test.db', 
-})
-```
-
-Test.db doesn't exist, so what will happen?
-
-```rb
-desc "Runs a console"
-task :console do
-    require_relative "environment.rb"
-    pry.start
-end
-```
-
-ActiveRecord::Base.connection - shows some of the connection stuff.
-
-ActiveRecord::Base  # point out namespacing /module
-    - class within AR
-    - used to establish connection
-    - in labs used to access methods we've been writing in SQL
-
-make a db folder and put dbs in there.  make sub directory migrate
-
-Rake -T has not added any extra tasks as expected
-http://api.rubyonrails.org/classes/ActiveRecord/Tasks/DatabaseTasks.html  
-
-Gemfile
-    gem 'activerecord'
-    gem 'sinatra-activerecord'
-[etc]
-
+### new way:
 ```rb
 config/database.yml
     development:
@@ -70,7 +38,6 @@ config/database.yml
       pool: 5
       timeout: 5000
 ```
-
 config/environment.rb
 ```rb
     require 'bundler/setup'
@@ -86,42 +53,47 @@ config/environment.rb
     require_all 'lib'
 ```
 
+
+ActiveRecord::Base  # point out namespacing /module
+    - class within AR
+    - used to establish connection
+    - in labs used to access methods we've been writing in SQL
+
+
+If Rake -T has not added any extra tasks as expected:
+http://api.rubyonrails.org/classes/ActiveRecord/Tasks/DatabaseTasks.html  
+
+## Migrations
+
+- Migration is a way to change _the structure_ of our database.  These Ruby files are tracked by git as normal and can be shared
+
 Make a migration
-    up/down vs change
+    - up/down vs change
 
 ```rb
-rake db:create_migration NAME=create_books_table
+rake db:create_migration NAME=create_authors_table
 ```
 
 ```rb
-class CreateBooksTable < ActiveRecord::Migration
+class CreateAuthorsTable < ActiveRecord::Migration
 
     def change
-        create_table :books do |t|
-            t.string :title
+        create_table :authors do |t|
+            t.string :name
         end
     end
 
 end
 ```
 
-in rake console
-    migration = CreateArtists.new
-    ls migration to show some methods
-    migration.change to execute
-
-sqlite3 db/test.db
-.tables
-.schema artists
-
 add a column
-`rake db:create_migration NAME=add_rating`
+`rake db:create_migration NAME=add_penname_to_authors`
 
 ```rb
-class AddRating < ActiveRecord::Migration
+class AddPenname < ActiveRecord::Migration
 
     def change
-        add_column :books, :rating, :integer
+        add_column :authors, :penname, :string
     end
 
 end
