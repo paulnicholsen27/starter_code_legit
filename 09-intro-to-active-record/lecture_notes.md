@@ -86,6 +86,11 @@ class CreateAuthorsTable < ActiveRecord::Migration
 end
 ```
 
+- Create some authors in console
+- Move over to seed file with `find_or_create`
+
+- show `.all`, `.find` and `.find_by`.  Show the differences between find and find_by\
+
 add a column
 `rake db:create_migration NAME=add_penname_to_authors`
 
