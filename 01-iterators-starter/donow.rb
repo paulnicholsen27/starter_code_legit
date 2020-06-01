@@ -1,14 +1,15 @@
-
-# For each of the following examples, write two methods that solve the 
-# problem:  One that uses `.each` and one that uses one of the higher level 
-# iterator methods
+#############################################################################
+# For each of the following examples, write *two* methods that solve the    #
+# problem:  One that uses `.each` and one that uses one of the higher level #
+# iterator methods                                                          #
+#############################################################################
 
 # Remember:
 
 # map/collect:  Returns an array where each value of the original array 
 # corresponds to an element in the new array
 
-# find/detect:  Returns the first element for which the statement in the block
+# find/detect:  Returns the _first_ element for which the statement in the block
 # evaluates as True
 
 # select/find_all:  Returns an array of _all_ elements for which the statement in
