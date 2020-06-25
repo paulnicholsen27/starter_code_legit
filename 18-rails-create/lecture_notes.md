@@ -18,6 +18,8 @@ Filter by vegetarian
 </form>
 ```
 Taco.rb
+
+- Can also code incorrectly by getting Taco.all and then selecting instead of using ActiveRecord methods
 ```
 def self.vegetarian
     Taco.where(vegetarian: true)
@@ -28,7 +30,7 @@ def self.meat
 end
 ```
 
-This has a bug as the params is a string not a bool, but good time to demonstrate byebug steps
+This has a bug as the params is a string not a bool, but good time to demonstrate byebug steps.  
     def index
         if params[:vegetarian] === "all"    
             @tacos = Taco.all
