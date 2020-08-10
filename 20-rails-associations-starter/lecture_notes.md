@@ -24,3 +24,12 @@ Restaurant.third.taco_ids = rest
 - Do assigment1 in small groups
 
 - Add collection_select to create taco.  Show unpermitted param problem
+
+Nested URLs:
+
+```rb
+    resources :restaurants
+    resources :restaurants do
+      resources :tacos, {only: [:index, :show]}
+    end
+```
