@@ -1,3 +1,5 @@
+REVIEW THIS -- THERE'S BUGS
+
 * Why use validations
     - Users are dumb (show gif)
 
@@ -9,7 +11,7 @@
     validates :price, presence: true, numericality: true
     validates :price, presence: true, numericality: { message: "%{value} seems wrong" }
     # also has %{value} and %{model}
-    validates :vegetarian, presence: true, inclusion: { in: ["true", "false"],
+    validates :vegetarian, presence: true, inclusion: { in: [true, false],
         message: " must be true or false" }
 
 ```
@@ -19,10 +21,7 @@
   ```rb
    validate :vegetarian_tacos_are_cheap,
  
-  def vegetarian_tacos_are_cheap
-    if price.present? && vegetarian && price > 10
-      errors.add(:price, "can't be more than 10 for a vegetarian taco")
-    end
+  def tacos_cant_start_with_a
   end
   ```
 
