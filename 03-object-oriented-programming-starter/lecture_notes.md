@@ -105,6 +105,8 @@ def introduction
         "My name is #{self.name} and I have a fluffiness score of #{@fluffiness}.  I am #{self.fluffiness}"
 end
 ```
+
+
 - class variable for @@all
   - it seemed to work to make this an instance method first, and then change it to a class method to demonstrate the difference
 - class methods
